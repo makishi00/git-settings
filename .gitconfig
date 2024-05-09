@@ -1,0 +1,21 @@
+[alias]
+	st = status
+	sw = switch
+	ch = checkout
+	br = branch
+	co = commit
+	re = restore
+	di = diff
+	me = merge
+	po = pull origin
+	fo = fetch origin
+[core]
+	excludesfile = /Users/{ユーザーネーム}/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	conflictstyle = diff3
